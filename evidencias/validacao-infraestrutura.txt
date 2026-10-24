@@ -1,0 +1,22 @@
+===== TERRAFORM OUTPUT =====
+vm_ip = tolist([
+  "10.97.0.42",
+  "172.17.0.1",
+])
+vm_name = "devops-lab"
+
+===== MULTIPASS =====
+Name                    State             IPv4             Image               Zone
+devops-lab              Running           10.97.0.42       Ubuntu 24.04 LTS    zone1
+                                          172.17.0.1
+
+===== CLOUD-INIT =====
+status: done
+
+===== DOCKER =====
+Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2
+active
+
+===== NGINX =====
+nginx version: nginx/1.24.0 (Ubuntu)
+active
