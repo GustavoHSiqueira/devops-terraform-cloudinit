@@ -1,0 +1,18 @@
+#cloud-config
+
+# Define o nome da máquina
+hostname: devops-lab
+manage_etc_hosts: true
+
+# Atualiza os índices de pacotes
+package_update: true
+
+# Instala Docker e Nginx
+packages:
+  - docker.io
+  - nginx
+
+# Inicia e habilita os serviços
+runcmd:
+  - [systemctl, enable, --now, docker]
+  - [systemctl, enable, --now, nginx]
